@@ -1,6 +1,15 @@
 const express = require('express');
 const app = express();
 const PORT = 3001;
+const cors = require("cors");
+
+
+app.use(
+  cors({
+    origin: "https://app-crm-beta.vercel.app",
+    credentials: true,
+  })
+);
 
 app.use(express.json());
 
